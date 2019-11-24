@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "381edffb4ca6a1e9243a56ad9b907f36",
+    "content-hash": "c1fd94b456b6ca96c59239ea7bb66cc3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3025,6 +3025,65 @@
                 "docs": "https://www.drupal.org/docs/8/modules/webform",
                 "forum": "https://drupal.stackexchange.com/questions/tagged/webform"
             }
+        },
+        {
+            "name": "drupal/webform_user_registration",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/webform_user_registration.git",
+                "reference": "f699510f00cd627f6e48d2339f31a1ac86f3ff98"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/webform": "*"
+            },
+            "require-dev": {
+                "drupal/coder": "^8.2",
+                "jakub-onderka/php-console-highlighter": "^0.3.2",
+                "jakub-onderka/php-parallel-lint": "^0.9.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0+5-dev",
+                    "datestamp": "1561763581",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "phplint": [
+                    "vendor/bin/parallel-lint --exclude vendor/ --exclude .idea/ -e php,module,inc,install,profile,theme ."
+                ],
+                "phpcs": [
+                    "vendor/bin/phpcs --ignore=vendor/,.idea/ --standard=vendor/drupal/coder/coder_sniffer/Drupal/ruleset.xml --extensions=php,module,inc,install,profile,theme --report=full --warning-severity=0 ."
+                ],
+                "phpcbf": [
+                    "vendor/bin/phpcbf --ignore=vendor/,.idea/ --standard=vendor/drupal/coder/coder_sniffer/Drupal/ruleset.xml --extensions=php,module,inc,install,profile,theme ."
+                ]
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Etroid",
+                    "homepage": "https://www.drupal.org/user/3048985"
+                }
+            ],
+            "description": "Webform user registration handler.",
+            "homepage": "https://www.drupal.org/project/webform_user_registration",
+            "support": {
+                "source": "https://git.drupalcode.org/project/webform_user_registration"
+            },
+            "time": "2019-06-28T23:13:44+00:00"
         },
         {
             "name": "drush/drush",
@@ -6655,7 +6714,7 @@
                 "testing",
                 "web"
             ],
-            "time": "2019-07-15 12:45:29"
+            "time": "2019-07-15T12:45:29+00:00"
         },
         {
             "name": "behat/mink-browserkit-driver",
@@ -6827,7 +6886,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2019-09-02 09:46:54"
+            "time": "2019-09-02T09:46:54+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -8913,7 +8972,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/toolbar_themes": 15
+        "drupal/toolbar_themes": 15,
+        "drupal/webform_user_registration": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
